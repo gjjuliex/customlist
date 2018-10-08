@@ -163,8 +163,8 @@ namespace UnitTestProject1
             customList.Add(value3);
             customList.Add(value4);
             customList.Add(value5);
-            customList.RemoveAt(1);
-            customList.RemoveAt(3);
+            customList.Remove(value1);
+            customList.Remove(value3);
 
 
 
@@ -191,8 +191,8 @@ namespace UnitTestProject1
             customList.Add(value3);
             customList.Add(value4);
             customList.Add(value5);
-            customList.RemoveAt(0);
-            customList.RemoveAt(1);
+            customList.Remove(0);
+            customList.Remove(1);
 
 
 
@@ -219,8 +219,8 @@ namespace UnitTestProject1
             customList.Add(value3);
             customList.Add(value4);
             customList.Add(value5);
-            customList.RemoveAt(0);
-            customList.RemoveAt(4);
+            customList.Remove(0);
+            customList.Remove(4);
 
 
 
@@ -228,5 +228,6 @@ namespace UnitTestProject1
             Assert.AreNotEqual(value2, value4);
 
         }
+
     }
 }

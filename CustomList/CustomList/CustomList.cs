@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    class CustomList<T>
+    public class CustomList<T>
     {
         private T[] arr = new T[11];
        
