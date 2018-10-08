@@ -96,4 +96,137 @@ namespace UnitTestProject1
             Assert.AreEqual(value4, customList[4]);
 
         }
+        //REMOVE//
+        [TestMethod]
+        public void TestMethodRemove6()
+        {
+            // Arrange
+            CustomList<int> customList = new CustomList<int>();           
+            int value1 = 4;
+            int value2 = 5;
+            int value3 = 6;
 
+
+
+            // Act
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.RemoveAt(value1);
+
+        
+
+            // Assert
+            Assert.IsTrue(value1, customList[3]);
+
+        }
+        [TestMethod]
+        public void TestMethodRemove7()
+        {
+            // Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int value1 = 4;
+            int value2 = 5;
+            int value3 = 6;
+
+
+
+            // Act
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.RemoveAt(1);
+            customList.RemoveAt(2);
+
+
+
+            // Assert
+            Assert.IsTrue(value1,value2, customList[1]);
+
+        }
+        [TestMethod]
+        public void TestMethodRemove8()
+        {
+            // Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int value1 = 4;
+            int value2 = 5;
+            int value3 = 6;
+            int value4 = 7;
+            int value5 = 8;
+
+
+
+            // Act
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.Add(value4);
+            customList.Add(value5);
+            customList.RemoveAt(1);
+            customList.RemoveAt(3);
+
+
+
+            // Assert
+            Assert.IsTrue(value2,value4,customList[3]);
+
+        }
+        [TestMethod]
+        public void TestMethodRemove9()
+        {
+            // Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int value1 = 4;
+            int value2 = 5;
+            int value3 = 6;
+            int value4 = 7;
+            int value5 = 8;
+
+
+
+            // Act
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.Add(value4);
+            customList.Add(value5);
+            customList.RemoveAt(0);
+            customList.RemoveAt(1);
+
+
+
+            // Assert
+            Assert.AreEqual(value3, customList[0]);
+
+        }
+        [TestMethod]
+        public void TestMethodRemove10()
+        {
+            // Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int value1 = 1;
+            int value2 = 5;
+            int value3 = 3;
+            int value4 = 5;
+            int value5 = 4;
+
+
+
+            // Act
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.Add(value4);
+            customList.Add(value5);
+            customList.RemoveAt(0);
+            customList.RemoveAt(4);
+
+
+
+            // Assert
+            Assert.AreNotEqual(value2, value4);
+
+        }
+    }
+}
