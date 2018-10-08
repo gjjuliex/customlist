@@ -112,12 +112,12 @@ namespace UnitTestProject1
             customList.Add(value1);
             customList.Add(value2);
             customList.Add(value3);
-            customList.RemoveAt(value1);
+            customList.Remove(value1);
 
         
 
             // Assert
-            Assert.IsTrue(value1, customList[3]);
+            Assert.AreEqual(value1, customList[2]);
 
         }
         [TestMethod]
@@ -135,13 +135,13 @@ namespace UnitTestProject1
             customList.Add(value1);
             customList.Add(value2);
             customList.Add(value3);
-            customList.RemoveAt(1);
-            customList.RemoveAt(2);
+            customList.Remove(1);
+            customList.Remove(2);
 
 
 
             // Assert
-            Assert.IsTrue(value1,value2, customList[1]);
+            Assert.AreEqual(value2, value3, customList[1]);
 
         }
         [TestMethod]
@@ -169,7 +169,7 @@ namespace UnitTestProject1
 
 
             // Assert
-            Assert.IsTrue(value2,value4,customList[3]);
+            Assert.AreEqual(2, 4, customList[3]);
 
         }
         [TestMethod]
@@ -228,6 +228,42 @@ namespace UnitTestProject1
             Assert.AreNotEqual(value2, value4);
 
         }
+        [TestMethod]
+        public void TestMethodOperatorPlus11()
+        {
+            // Arrange
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> list3 = new CustomList<int>();
+            CustomList<int> expectedList = new CustomList<int>();
+            list3 = list1 + list2;           
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+            int value4 = 4;
+            int value5 = 5;
+            int value6 = 6;
+            int value7 = 7;
+            int value8 = 8;
+            
 
+
+            // Act
+            list1.Add(value1);
+            list1.Add(value2);
+            list1.Add(value3);
+            list1.Add(value4);
+            list2.Add(value5);
+            list2.Add(value6);
+            list2.Add(value7);
+            list2.Add(value8);
+            expectedList = list1 + list2;
+
+
+
+            // Assert
+            Assert.AreEqual(list3, expectedList);
+
+        }
     }
 }
