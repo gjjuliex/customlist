@@ -15,3 +15,7 @@ C:\Users\julie\source\repos\CustomList\UnitTestProject1\bin\Debug\Microsoft.Visu
 C:\Users\julie\source\repos\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CopyComplete
 C:\Users\julie\source\repos\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\julie\source\repos\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\julie\Documents\devcode\customlist\customlist\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache
+C:\Users\julie\Documents\devcode\customlist\customlist\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache
+C:\Users\julie\Documents\devcode\customlist\customlist\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\julie\Documents\devcode\customlist\customlist\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
