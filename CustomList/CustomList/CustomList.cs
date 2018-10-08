@@ -102,6 +102,12 @@ namespace CustomList
 
         //Overload -//
 
-     
+        public static CustomList<T> operator -(CustomList<T> list1, CustomList<T> list2)
+        {
+
+            CustomList<T> newList = new CustomList<T>(list1 - list2);
+            newList = list1 - list2;
+            return newList;
+        }
     }
 }
