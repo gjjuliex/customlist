@@ -228,6 +228,7 @@ namespace UnitTestProject1
             Assert.AreNotEqual(value2, value4);
 
         }
+        //Overload + Operator//
         [TestMethod]
         public void TestMethodOperatorPlus11()
         {
@@ -263,6 +264,89 @@ namespace UnitTestProject1
 
             // Assert
             Assert.AreEqual(list3, expectedList);
+
+        }
+        //Overload + Operator//
+        [TestMethod]
+        public void TestMethodOperatorPlus12()
+        {
+            // Arrange
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> list3 = new CustomList<int>();
+            CustomList<int> expectedList = new CustomList<int>();
+            list3 = list1 + list2;
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+            int value4 = 4;
+            int value5 = 5;
+            int value6 = 6;
+            int value7 = 7;
+            int value8 = 8;
+
+
+
+            // Act
+            list1.Add(value1);
+            list1.Add(value2);
+            list1.Add(value3);
+            list1.Add(value4);
+            list2.Add(value5);
+            list2.Add(value6);
+            list2.Add(value7);
+            list2.Add(value8);
+            expectedList = list1 + list2;
+
+
+
+            // Assert
+            Assert.AreNotEqual(list2, expectedList);
+
+        }
+        //Overload + Operator//
+        [TestMethod]
+        public void TestMethodOperatorPlus13()
+        {
+            // Arrange
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> list3 = new CustomList<int>();
+            CustomList<int> resultList = new CustomList<int>();
+            CustomList<int> actualList = new CustomList<int>();
+            CustomList<int> list4 = new CustomList<int>();
+            CustomList<int> list5 = new CustomList<int>();
+            list3 = list1 + list2;
+            list4 = list3 + list1;
+            list5 = list4 + list2;
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+            int value4 = 4;
+            int value5 = 5;
+            int value6 = 6;
+            int value7 = 7;
+            int value8 = 8;
+
+
+
+            // Act
+            list1.Add(value1);
+            list1.Add(value2);
+            list1.Add(value3);
+            list1.Add(value4);
+            list2.Add(value5);
+            list2.Add(value6);
+            list2.Add(value7);
+            list2.Add(value8);
+            actualList = list1 + list2 + list1 + list2;
+            resultList = list5; 
+        
+
+
+
+            // Assert
+            Assert.AreEqual(resultList, actualList);
 
         }
     }
