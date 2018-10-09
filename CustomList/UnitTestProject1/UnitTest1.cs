@@ -442,5 +442,85 @@ namespace UnitTestProject1
             Assert.AreEqual(resultList, actualList);
 
         }
+        [TestMethod]
+        public void TestMethodOperatorSub16()
+        {
+            // Arrange
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> list3 = new CustomList<int>();
+            CustomList<int> result = list1 - list2;
+
+            list3 = list1 - list2;
+          
+
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+            int value4 = 4;
+            int value5 = 5;
+            int value6 = 2;
+            int value7 = 1;
+            int value8 = 8;
+
+
+
+            // Act
+            list1.Add(value1);
+            list1.Add(value2);
+            list1.Add(value3);
+            list1.Add(value4);
+            list2.Add(value5);
+            list2.Add(value6);
+            list2.Add(value7);
+            list2.Add(value8);
+            result = list1 - list2;
+          
+
+
+           // Assert
+            Assert.AreEqual(value3, value4);
+
+        }
+        [TestMethod]
+        public void TestMethodOperatorSub17()
+        {
+            // Arrange
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> list3 = new CustomList<int>();
+            CustomList<int> result = list1 - list2;
+
+            list3 = list1 - list2;
+
+
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+            int value4 = 4;
+            int value5 = 5;
+            int value6 = 6;
+           
+
+
+
+            // Act
+            list1.Add(value1);
+            list1.Add(value2);
+            list1.Add(value3);
+            list1.Add(value4);
+            list2.Add(value5);
+            list2.Add(value6);
+            list2.Add(value1);
+            list2.Add(value4);
+            result = list1 - list2;
+
+
+
+            // Assert
+            Assert.AreEqual(value1, value4);
+
+        }
+
     }
 }
